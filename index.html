@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+
+	<script>
+		function calculator(){
+			let eded1 = parseInt(document.getElementById('eded1').value);
+			let eded2 = parseInt(document.getElementById('eded2').value);
+
+			let emeliyyat = document.getElementById('emeliyyat').value;
+
+			if (emeliyyat == '+') {
+				document.getElementById('netice').value = eded1+eded2;
+			} else if (emeliyyat == '-') {
+				document.getElementById('netice').value = eded1-eded2;
+			} else if (emeliyyat == '*') {
+				document.getElementById('netice').value = eded1*eded2;
+			} else{
+				document.getElementById('netice').value = eded1/eded2
+			}
+
+		}
+	</script>
+
+EDED1<input type="text" id="eded1"><br><br>
+EDED2<input type="text" id="eded2"><br><br>
+
+Emeliyyat<select id="emeliyyat">
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="*">*</option>
+	<option value="/">/</option>
+</select>
+
+<button onclick="calculator();">=</button>
+<input type="text" id="netice">
+
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
